@@ -1,0 +1,8 @@
+<launch>
+	<node pkg="serial_imu" name="imu_sonser_spec" type="serial_imu" serial_port="/dev/usbimu1" serial_baud="921600">
+		<param name="serial_port" type="str" value="/dev/usbimu1" />
+		<param name="serial_baud" type="int" value="921600" />
+		<param name="topic_name" type="str" value="/imu_data1" />
+	</node>
+	<node pkg="serial_imu" name="sub_spec" type="sub_spec" output="screen"/>
+</launch>

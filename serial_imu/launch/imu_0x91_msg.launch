@@ -1,0 +1,15 @@
+<launch>
+	<node pkg="serial_imu" name="imu_sensor_1" type="serial_imu">
+		<param name="serial_port" type="str" value="/dev/usbIMU1" />
+		<param name="serial_baud" type="int" value="921600" />
+		<param name="imu_topic_name" type="str" value="/imu_data1" />
+		<param name="imu_raw_topic_name" type="str" value="/imu_raw_data1" />
+	</node>
+	<node pkg="serial_imu" name="imu_sensor_2" type="serial_imu">
+		<param name="serial_port" type="str" value="/dev/usbIMU2" />
+		<param name="serial_baud" type="int" value="921600" />
+		<param name="imu_topic_name" type="str" value="/imu_data2" />
+		<param name="imu_raw_topic_name" type="str" value="/imu_raw_data2" />
+	</node>
+	<node pkg="serial_imu" name="sub_0x91" type="sub_0x91" output="screen"/>
+</launch>
